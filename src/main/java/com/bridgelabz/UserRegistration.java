@@ -15,7 +15,7 @@ public class UserRegistration {
         return Pattern.matches("^(91)[\\s][0-9]{10}", validUserMobileNum);
     }
     public static boolean givenPassword_WhenValid_ShouldReturnTrue(String validUserPassword) {
-        return Pattern.matches("^(.*){8}", validUserPassword);
+        return Pattern.matches("(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9@$!%*#?&]{8,}$", validUserPassword);
     }
 
 
@@ -30,7 +30,7 @@ public class UserRegistration {
         boolean validUserMobileNum = givenUserMobileNum_WhenValidFormat_ShouldReturnTrue("91 2345677892");
         System.out.println("user mobile number is valid" + validUserMobileNum);
         boolean validUserPassword = givenPassword_WhenValid_ShouldReturnTrue("wertP7$%");
-        System.out.println("user password of minimum 8 char and at least 1 upper case is valid" + validUserPassword);
+        System.out.println("user password of minimum 8 char and at least 1 upper case and 1 num is valid" + validUserPassword);
 
     }
     }
