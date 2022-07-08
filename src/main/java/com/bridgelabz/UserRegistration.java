@@ -19,6 +19,7 @@ public class UserRegistration {
     }
 
 
+
     public static void main(String[] args) {
         boolean firstName = givenFirstName_WhenValid_ShouldReturnTrue("Riya");
         System.out.println("first name is valid" + firstName);
@@ -28,8 +29,9 @@ public class UserRegistration {
         System.out.println("user mail id is valid" + validUserMail);
         boolean validUserMobileNum = givenUserMobileNum_WhenValidFormat_ShouldReturnTrue("91 2345677892");
         System.out.println("user mobile number is valid" + validUserMobileNum);
-        boolean validUserPassword = givenPassword_WhenValid_ShouldReturnTrue("wert67$%");
-        System.out.println("user password of minimum 8 char is valid" + validUserPassword);
+        boolean validUserPassword = givenPassword_WhenValid_ShouldReturnTrue("wertP7$%");
+        System.out.println("user password of minimum 8 char and at least 1 upper case is valid" + validUserPassword);
+
     }
     }
 
